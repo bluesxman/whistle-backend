@@ -4,18 +4,19 @@ provider:
   name: aws
   runtime: java8
   stage: dev
-  region: us-east-1
+  region: us-west-2
+  memorySize: 512
 
 package:
   artifact: build/libs/whistle-dev-all.jar
 
 functions:
-  hello:
-    handler: com.smackwerks.whistle.api.Schedule
+  greet:
+    handler: com.smackwerks.whistle.api.Schedule::greet
     events:
       - http:
-          path: schedule
+          path: schedule/greet
           method: get
+  hello:
+    handler: com.serverless.Handler
 
-plugins:
-  - serverless-offline
