@@ -19,4 +19,9 @@ functions:
           method: get
   hello:
     handler: com.serverless.Handler
+    events:
+    - http:
+        path: schedule/hello
+        method: get
+
 
