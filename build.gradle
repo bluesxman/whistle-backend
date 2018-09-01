@@ -19,7 +19,7 @@ buildscript {
     maven { url "https://plugins.gradle.org/m2/" }
   }
   dependencies {
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.50"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.61"
     classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
     classpath "com.github.jengelman.gradle.plugins:shadow:2.0.1"
     classpath "de.sebastianboegl.gradle.plugins:shadow-log4j-transformer:2.1.1"
