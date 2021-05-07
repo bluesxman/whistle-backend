@@ -1,10 +1,15 @@
 package com.smackwerks.whistle.api
 
-import com.smackwerks.whistle.util.d
+import com.amazonaws.services.lambda.runtime.Context
+import com.amazonaws.services.lambda.runtime.RequestHandler
 
-class Schedule {
-    fun greet(name: String): String {
-        d("greet($name)")
+class Schedule : RequestHandler<String, String> {
+    override fun handleRequest(input: String, context: Context): String {
+        return greet(input, context)
+    }
+xxxxx
+    fun greet(name: String, context: Context): String {
+        context.logger.log("greet($name)")
         return "Hello, $name!!!"
     }
 }

@@ -12,7 +12,7 @@ package:
 
 functions:
   greet:
-    handler: com.smackwerks.whistle.api.Schedule::greet
+    handler: com.smackwerks.whistle.api.Schedule
     events:
       - http:
           path: schedule/greet
